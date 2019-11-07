@@ -1,0 +1,25 @@
+.section-heading {
+  margin: 0 0 43px;
+  .heading-text {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .lines {
+    border-top: 2px solid #50CBCB;
+    width: 6px;
+    position: relative;
+    margin: 15px auto 0;
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      width: 30px;
+      border-top: 2px solid #50CBCB;
+    }
+    &:before {
+      left: -34px;
+    }
+  }
+}

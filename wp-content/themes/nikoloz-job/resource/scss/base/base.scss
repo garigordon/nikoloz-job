@@ -1,0 +1,45 @@
+.container,
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+.container {
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+.row-line {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  transition: all .2s ease-in-out;
+}
+
+.section {
+  @media (min-width: 768px) {
+    padding: 110px 0 95px;
+  }
+}
+
+h1, h2 {
+  font-weight: 300;
+}
