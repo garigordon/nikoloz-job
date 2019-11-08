@@ -1,0 +1,22 @@
+.section-contacts{
+  padding: 95px 0 75px;
+  background: radial-gradient(circle,#ffc01f,#eba900);
+  @media (min-width: 767px) {
+    padding: 110px 0 95px;
+  }
+  .contacts-item{
+    color: white;
+    text-shadow: rgba(140,140,140,.1) 1px 1px;
+    width: 100%;
+    text-align: center;
+    @media (min-width: 767px) {
+      width: 33.33333%;
+    }
+    p{
+      font-size: 16px;
+      a{
+        color: white;
+      }
+    }
+  }
+}

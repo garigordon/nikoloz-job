@@ -1,6 +1,14 @@
 .section-whywe {
+    position: relative;
+    background: url(../images/nobg.png) center center fixed #ebeef6;
   .column {
-    width: 50%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: justify;
+    @media (min-width: 992px) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
   }
   .whywe-list {
     padding: 0;

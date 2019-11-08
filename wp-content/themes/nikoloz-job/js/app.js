@@ -115,8 +115,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\OSPanel\domains\jb.wakeful.tech\wp-content\themes\nikoloz-job\resource\js\app.js */"./wp-content/themes/nikoloz-job/resource/js/app.js");
-module.exports = __webpack_require__(/*! E:\OSPanel\domains\jb.wakeful.tech\wp-content\themes\nikoloz-job\resource\scss\app.scss */"./wp-content/themes/nikoloz-job/resource/scss/app.scss");
+__webpack_require__(/*! D:\nikoloz-job\wp-content\themes\nikoloz-job\resource\js\app.js */"./wp-content/themes/nikoloz-job/resource/js/app.js");
+module.exports = __webpack_require__(/*! D:\nikoloz-job\wp-content\themes\nikoloz-job\resource\scss\app.scss */"./wp-content/themes/nikoloz-job/resource/scss/app.scss");
 
 
 /***/ })

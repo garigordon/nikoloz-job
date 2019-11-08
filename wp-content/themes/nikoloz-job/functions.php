@@ -1,4 +1,7 @@
 <?php
+
+error_reporting(E_ERROR | E_PARSE);
+
 //support <title>'s
 add_theme_support('title-tag');
 
@@ -30,7 +33,7 @@ function nikoloz_enqueue_scripts()
 
     wp_deregister_script($jquery);
 
-    wp_enqueue_script($jquery, $jqueryUri, [], $jqueryV, $jqueryInFooter);
+    //wp_enqueue_script($jquery, $jqueryUri, [], $jqueryV, $jqueryInFooter);
     wp_enqueue_script($tweenmax, $tweenmaxUri, [], $tweenmaxV, $tweenmaxInFooter);
     wp_enqueue_script($app, $appUri, [], $appV, $appInFooter);
 

@@ -32,9 +32,15 @@
 
 a {
   transition: all .2s ease-in-out;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .section {
+  padding: 60px 0 45px;
   @media (min-width: 768px) {
     padding: 110px 0 95px;
   }

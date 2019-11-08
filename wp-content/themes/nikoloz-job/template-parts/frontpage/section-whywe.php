@@ -1,12 +1,10 @@
 <section class="section section-whywe">
     <div class="container">
-        <div class="row">
-            <div class="section-heading">
-                <h2 class="heading-text">Почему выбирают нас</h2>
-                <hr class="lines">
-            </div>
+        <div class="section-heading">
+            <h2 class="heading-text">Почему выбирают нас</h2>
+            <hr class="lines">
         </div>
-        <div class="row whywe">
+        <div class="row-line whywe">
             <div class="column">
                 <ul class="whywe-list">
                     <li><i class="fas icon icon-star"></i><h3>Мы работаем на рынке более 10 лет</h3><p>Наша команда выезжает на сезонные работы в Европу для сбора ягод и клубники с 2009  года. Каждый год проводятся конкурсы, по итогам которых мы поощряем и мотивируем лучших сборщиков.</p></li>

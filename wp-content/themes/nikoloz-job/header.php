@@ -14,6 +14,7 @@
     <link rel="alternate" hreflang="ru" href="https://nikoloz-job.ua/"/>
     <meta name="msapplication-TileColor" content="#08031e">
     <meta name="theme-color" content="#ffffff">
+    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class() ?>>

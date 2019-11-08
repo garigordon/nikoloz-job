@@ -1,0 +1,84 @@
+.section-testimonials{
+    position: relative;
+    background: url(../images/bg_testimonials_sm.jpg) center center fixed #001828;
+    z-index: 1;
+    .heading-text{
+        color: #fff;
+    }
+
+    &:before{
+        position: absolute;
+        background: rgba(0,24,40,.9);
+        z-index: -1;
+    }
+
+    .testimonials-video-wrap{
+        width: 58%;
+
+        .testimonials-video--l{
+            background: url(../images/ipad.png) no-repeat;
+            padding: 40px 45px 0 159px;
+
+            .video-slider-item{
+                height: 338px;
+            }
+
+            .unslider-nav{
+                margin-top: 10px;
+                li{
+                    background: rgba(150,150,150,.1);
+                    cursor: pointer;
+                    height: 16px;
+                    width: 16px;
+                    display: inline-block;
+                    z-index: -9999;
+                    margin: 0 10px;
+                    position: relative;
+                    box-shadow: 0 1px 1px rgba(80,203,203,.4), inset 0 1px 1px rgba(0,0,0,.1), 0 0 0 2px rgba(80,203,203,.5);
+                    border-radius: 50%;
+                    transition: all 2s;
+                }
+            }
+        }
+    }
+
+    .testimonials-messages{
+        width: 42%;
+        visibility: visible;
+        animation-name: slideInRight;
+        padding-left: 5px;
+        padding-right: 15px;
+        text-align: center;
+
+        .testimonials-btn{
+            color: #50CBCB;
+            border: 1px solid #50CBCB;
+            display: inline-block;
+            padding: 5px 10px;
+            display: inline-block;
+
+            &:hover{
+              color: white;
+              background-color: #50CBCB;
+              border-color: #50CBCB;
+              text-decoration: none;
+            }
+        }
+    }
+
+    .slideInRight{
+        -webkit-animation-name: slideInRight;
+        animation-name: slideInRight;
+    }
+
+}
+
+.section-testimonials:before{
+    content: "";
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+}
