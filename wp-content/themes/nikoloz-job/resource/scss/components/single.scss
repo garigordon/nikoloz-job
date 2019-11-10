@@ -70,8 +70,70 @@
   }
 }
 
-.main{
+.site-content.row-line{
+  justify-content: space-between;
+  padding: 80px 0;
+}
 
+.main{
+  width: 100%;
+  @media (min-width: 767px) {
+    width: 65%;
+  }
+  .post-item{
+    margin-bottom: 60px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.08);
+  }
+
+  .post-inner {
+    padding: 40px 30px 60px;
+
+    .post-meta {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: .9rem;
+      color: #e9ecef;
+
+      li {
+        position: relative;
+        display: inline-block;
+        padding: 0 10px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:before {
+          position: absolute;
+          top: 5px;
+          left: -3px;
+          width: 1px;
+          height: 10px;
+          background: #e9ecef;
+          content: '';
+        }
+      }
+    }
+
+    .post-comment{
+      margin-bottom: 25px;
+      a{
+        color: #50CBCB;
+        &:hover{
+          color: #2f9f9f;
+        }
+      }
+    }
+  }
+  .comment-warning{
+    margin-top: 10px;
+  }
+
+  .comment-total{
+    margin: 30px 0 40px;
+  }
 }
 
 

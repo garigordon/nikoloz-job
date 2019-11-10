@@ -18,7 +18,7 @@ get_header();
         </ul>
     </div>
 </div>
-<div class="news-wrapper container row-line">
+<div class="site-content container row-line">
     <main class="main">
         <div class="row-line">
             <article class="post-item">
