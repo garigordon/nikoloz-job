@@ -23,6 +23,8 @@
         <div class="navbar">
             <div class="container">
                 <ul class="language">
+                    <li><span>Мова:</span></li>
+                    <li><a>Українська</a></li>
                     <?php
                     if ( qtrans_getLanguage() == 'ua' ) { ?>
                         <li>
@@ -65,6 +67,16 @@
                             'walker' => '',
                         ]);
                         ?>
+                        <ul class="navbar-nav">
+                            <li><a href="#" title="Главная">Главная</a></li>
+                            <li><a href="#" title="О нас">О нас</a></li>
+                            <li><a href="#" title="Актуальные вакансии">Актуальные вакансии</a></li>
+                            <li><a href="#" title="Работа">Работа</a></li>
+                            <li><a href="#" title="Отзывы">Отзывы</a></li>
+                            <li><a href="#" title="Информация">Информация</a></li>
+                            <li><a href="#" title="Partnership">Partnership</a></li>
+                            <li><a href="#" title="Контакты">Контакты</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>

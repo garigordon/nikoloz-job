@@ -2,12 +2,11 @@
     position: relative;
     background: url(../images/nobg.png) center center fixed #ebeef6;
   .column {
-    flex: 0 0 100%;
-    max-width: 100%;
+    width: 100%;
     text-align: justify;
+    padding: 15px;
     @media (min-width: 992px) {
-      flex: 0 0 50%;
-      max-width: 50%;
+      width: 50%;
     }
   }
   .whywe-list {
@@ -20,17 +19,43 @@
     li {
       padding: 0 0 0 65px;
       margin-bottom: 30px;
-    }
-
-    i {
-      top: 0;
-      left: 25px;
-      position: absolute;
-      font-size: 25px;
-      @media (min-width: 768px) {
+      position: relative;
+      &:before{
+        position: absolute;
+        content: '';
+        top:0;
         left: 0;
-        font-size: 45px;
       }
+    }
+    .icon-star:before{
+      background: url("../images/icon1.jpg") no-repeat;
+      height: 47px;
+      width: 50px;
+    }
+    .icon-shield-alt:before{
+      background: url("../images/icon2.jpg") no-repeat;
+      height: 49px;
+      width: 48px;
+    }
+    .icon-users:before{
+      background: url("../images/icon3.jpg") no-repeat;
+      height: 50px;
+      width: 46px;
+    }
+    .icon-thumbs-up:before{
+      background: url("../images/icon4.jpg") no-repeat;
+      height: 49px;
+      width: 55px;
+    }
+    .icon-bullhorn:before{
+      background: url("../images/icon5.jpg") no-repeat;
+      height: 36px;
+      width: 57px;
+    }
+    .icon-flag:before{
+      background: url("../images/icon6.jpg") no-repeat;
+      height: 46px;
+      width: 47px;
     }
 
     h3 {

@@ -19,14 +19,20 @@
       .footer-links{
         list-style: none;
         margin: 0 0 10px;
-        padding: 0;
         li{
-          :before{
-            content: '\f105'; //шрифт  FontAwesome
+          position: relative;
+          padding-left: 15px;
+          &:before{
+            content: '';
             padding-right: 10px;
             color: #bdc3ca;
             font-weight: 900;
-            font-family: 'Font Awesome 5 Free';
+            background: url("../images/array.jpg") no-repeat;
+            position: absolute;
+            width: 7px;
+            height: 10px;
+            top: 6px;
+            left: 0;
           }
           a{
             font-size: 15px;
@@ -44,6 +50,9 @@
   .footer-bottom{
     background-color: rgba(0,24,40,.1);
     padding: 20px 0;
+    p{
+      margin: 0;
+    }
     .copyright{
       color: #bdc3ca;
       text-align: center;

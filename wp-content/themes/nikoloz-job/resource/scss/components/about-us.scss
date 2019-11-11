@@ -1,0 +1,189 @@
+.site-content{
+  padding: 80px 0;
+
+  .card{
+    position: relative;
+    display: block;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.08);
+    padding: 1.25rem;
+    ul{
+      list-style: disc;
+      padding-left: 40px;
+    }
+
+    h3{
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    .embed-responsive{
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      min-height: 270px;
+      @media (min-width: 767px) {
+        min-height: 500px;
+      }
+      iframe{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    }
+
+    .media {
+      margin-bottom: 0;
+      @media (min-width: 767px) {
+        margin-bottom: 30px;
+      }
+      .media-img{
+        padding-right: 10px;
+        width: 100%;
+        text-align: center;
+        @media (min-width: 767px) {
+          width: 25%;
+        }
+        img{
+          margin-bottom: 1rem;
+        }
+      }
+
+      .media-body{
+        width: 100%;
+        @media (min-width: 767px) {
+          width: 75%;
+        }
+      }
+    }
+    .documents{
+      margin-bottom: 0;
+      @media (min-width: 767px) {
+        margin-bottom: 30px;
+      }
+      .document-item{
+        width: 100%;
+        padding: 0 0 20px 0;
+        @media (min-width: 767px) {
+          width: 16.66%;
+          padding: 0 13px;
+        }
+      }
+    }
+
+    .table-responsive{
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      border: none;
+      .table{
+        width: 100%;
+        color: #212529;
+        margin-bottom: 0;
+        border-collapse: collapse;
+        img{
+          height: 30px;
+        }
+        tr:nth-child(odd){
+          background: #f7f8fa;
+        }
+        .smi-logo{
+          width: 120px;
+          @media (min-width: 767px) {
+            width: 200px;
+          }
+        }
+        td{
+          font-weight: 300;
+          color: #3a3a44;
+          padding: 10px;
+          border-top: none;
+          vertical-align: middle;
+        }
+        .td-right{
+          text-align: right;
+          .btn-go{
+            padding: .25rem .5rem;
+            font-size: .875rem;
+            line-height: 1.5;color: #fff;
+            background-color: #50CBCB;
+            border-color: #50CBCB;
+            box-shadow: none;
+            display: inline-block;
+            &:hover{
+              color: #fff;
+              background-color: #38bdbd;
+              border-color: #35b3b3;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .partners-item{
+      width: 100%;
+      padding: 0 15px;
+      @media (min-width: 767px) {
+        width: 33.333%;
+      }
+      p{
+        text-align: center;
+        font-weight: bolder;
+      }
+    }
+
+    .team{
+      width: 50%;
+      margin-bottom: 0;
+      text-align: center;
+      overflow: hidden;
+      @media (min-width: 767px) {
+        width: 25%;
+        margin-bottom: 30px;
+      }
+
+      .team-name{
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+
+      .team-img{
+        width: 60%;
+        height: 60%;
+        position: relative;
+        display: inline-block;
+        padding: 12px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 2px 5px 2px #f2f4f9;
+        @media (min-width: 767px) {
+          width: 210px;
+          height: 210px;
+        }
+        img{
+          display: block;
+          width: 100%;
+          box-shadow: 0 2px 5px 2px #eff1f8;
+          border-radius: 50%;
+        }
+      }
+      .team-position{
+        font-size: .9rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+
+

@@ -2,11 +2,24 @@
     background: url(../images/bg_vacancy_sm.jpg) center center fixed #f5f5f5;
 
     .vacancy-item{
-        width: 47%;
-        margin: 15px;
-        box-shadow: 0 2px 4px rgba(0,0,0,.12);
-        background: #fff;
-        position: relative;
+        width: 100%;
+        overflow: hidden;
+        @media (min-width: 992px) {
+            width: 50%;
+            padding: 0 15px;
+        }
+        .vacancy{
+            overflow: hidden;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,.12);
+            background: #fff;
+            position: relative;
+
+            img{
+                height: 100%;
+                max-width: 320px;
+            }
+        }
 
         .vacancy-item-media{
             width: 47%;
@@ -58,7 +71,6 @@
             left: 0;
             height: 100%;
             transition: all .3s;
-            box-sizing: content-box;
             z-index: 2;
             background: #fff;
 
@@ -99,13 +111,20 @@
             padding: 0 0 10px;
             color: #bdc3ca;
 
-            .icon-map-marker-alt:before{
-                content: "\f3c5";
-            }
-
             li{
               margin-right: 0;
               display: inline-block;
+              position: relative;
+              padding-left: 20px;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 3px;
+                    background: url("../images/location.jpg") no-repeat;
+                    width: 13px;
+                    height: 16px;
+                }
             }
         }
 
@@ -121,30 +140,33 @@
 
         .vacancy-item-btn{
             text-align: center;
-
-            &:before {
-                display: block;
-                bottom: -1px;
-                width: 14px;
-                background-color: #50CBCB;
-                -webkit-transform: skew(-15deg) translateX(5px);
-                transform: skew(-15deg) translateX(5px);
-                transition: all .3s;
-                z-index: 1;
-            }
-
+            text-transform: uppercase;
             .vacancy-btn{
                 position: absolute;
                 bottom: 0;
                 right: 0;
                 padding: 10px 24px;
-                text-transform: uppercase;
                 border: none;
                 z-index: 1;
                 color: #fff;
                 background-color: #50CBCB;
-                border-color: #50CBCB;
                 box-shadow: none;
+                display: inline-block;
+                &:before {
+                    display: block;
+                    bottom: -1px;
+                    width: 14px;
+                    background-color: #50CBCB;
+                    -webkit-transform: skew(-15deg) translateX(5px);
+                    transform: skew(-15deg) translateX(5px);
+                    transition: all .3s;
+                    z-index: 1;
+                }
+                &:hover, &:hover:before{
+                    color: #fff;
+                    background-color: #38bdbd;
+                    text-decoration: none;
+                }
             }
         }
     }

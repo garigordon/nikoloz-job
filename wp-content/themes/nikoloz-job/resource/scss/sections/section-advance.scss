@@ -3,6 +3,12 @@
    h1, h2{
     color: white;
    }
+
+  ul{
+    list-style: disc;
+    margin-bottom: 1rem;
+    padding-left: 40px;
+  }
    .advance-item{
         width: 100%;
         @media (min-width: 767px) {
