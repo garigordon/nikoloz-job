@@ -2,4 +2,9 @@
     <video loop="true" muted autoplay>
         <source src="<?php bloginfo('template_url') ?>/media/bg-video.mp4" type="video/mp4">
     </video>
+    <div class="container masthead-footer">
+        <div class="">
+            <a href="#" class="vacancy-btn">Вакансии</a>
+        </div>
+    </div>
 </div>

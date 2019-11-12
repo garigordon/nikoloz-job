@@ -9,8 +9,15 @@
     margin-bottom: 1rem;
     padding-left: 40px;
   }
+  .advance{
+    margin-bottom: 0;
+    @media (min-width: 767px) {
+      margin-bottom: 10px;
+    }
+  }
    .advance-item{
         width: 100%;
+        text-align: center;
         @media (min-width: 767px) {
            width: 50%;
         }
@@ -21,13 +28,17 @@
    .advance-gallery{
         width: 290px;
         height: 210px;
-        margin-top: 75px;
         display: inline-block;
         position: relative;
         @media (min-width: 767px) {
-           width: 460px;
-            height: 338px;
+          width: 460px;
+          height: 338px;
         }
+     .advancy-gallery-item{
+       border: 6px solid #fff;
+       display: inline-block;
+       box-shadow: 0 0 5px rgba(0,0,0,.2);
+     }
    }
 
    .advance-text{

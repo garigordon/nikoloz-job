@@ -2,11 +2,13 @@
     position: relative;
     background: url(../images/bg_testimonials_sm.jpg) center center fixed #001828;
     z-index: 1;
+    padding: 110px 0 95px;
     @media (min-width: 576px) {
         background: url(../images/bg_testimonials_md.jpg) center center fixed #001828;
     }
     @media (min-width: 767px) {
         background: url(../images/bg_testimonials_xl.jpg) center center fixed #001828;
+        padding-bottom: 0;
     }
     .heading-text{
         color: #fff;
@@ -25,8 +27,15 @@
         }
 
         .testimonials-video--l{
-            background: url(../images/ipad.png) no-repeat;
-            padding: 40px 45px 0 159px;
+            background: none;
+            padding: 40px 158px 0 45px;
+            width: 651px;
+            height: 469px;
+            margin-bottom: 0;
+            @media (min-width: 767px) {
+                background: url(../images/ipad.png) no-repeat;
+                padding: 40px 45px 0 159px;
+            }
 
             .video-slider-item{
                 height: 338px;

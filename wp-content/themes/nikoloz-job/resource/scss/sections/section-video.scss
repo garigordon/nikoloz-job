@@ -1,4 +1,39 @@
 .video{
-    height: 650px;
     overflow: hidden;
+    position: relative;
+    min-height: 650px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(/assets/templates/default/images/bg_header_xl.jpg);
+    video{
+        min-width: auto;
+        min-height: auto;
+        width: 1349px;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition-duration: 2000ms;
+    }
+}
+
+.masthead-footer{
+    padding-top: 350px;
+    .vacancy-btn{
+        padding: .5rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        position: absolute;
+        color: #fff;
+        background-color: #50CBCB;
+        box-shadow: none;
+        display: inline-block;
+        text-transform: uppercase;
+        &:hover{
+            background-color: #38bdbd;
+            text-decoration: none;
+        }
+    }
 }

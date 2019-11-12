@@ -1,8 +1,21 @@
 <section class="section section-advance section-base">
     <div class="container">
-        <div class="row-line">
+        <div class="row-line advance">
             <div class="advance-photo-gallery-wrap advance-item">
-                <div class="advance-gallery"></div>
+                <div class="advance-gallery">
+                    <a href="#" class="advancy-gallery-item"><img src="<?php bloginfo('template_url') ?>/images/17.jpg"></a>
+<!--                    <a href="#"><img src="--><?php //bloginfo('template_url') ?><!--/images/3.jpg"></a>-->
+<!--                    <a href="#"><img src="--><?php //bloginfo('template_url') ?><!--/images/photo5330308848654854607.jpg"></a>-->
+<!--                    <a href="#"><img src="--><?php //bloginfo('template_url') ?><!--/images/photo5330308848654854609.jpg"></a>-->
+<!--                    <a href="#"><img src="--><?php //bloginfo('template_url') ?><!--/images/photo5330308848654854606.jpg"></a>-->
+<!--                    <a href="#"><img src="--><?php //bloginfo('template_url') ?><!--/images/kenn.jpg"></a>-->
+<!--                    <a href="#"><img src="--><?php //bloginfo('template_url') ?><!--/images/viber-image-1.jpg"></a>-->
+<!--                    <a href="#"><img src="--><?php //bloginfo('template_url') ?><!--/images/nggo.jpg"></a>-->
+<!--                    <a href="#"><img src="--><?php //bloginfo('template_url') ?><!--/images/ngshn.jpg"></a>-->
+<!--                    <a href="#"><img src="--><?php //bloginfo('template_url') ?><!--/images/keken.jpg"></a>-->
+<!--                    <a href="#"><img src="--><?php //bloginfo('template_url') ?><!--/images/ltor.jpg"></a>-->
+<!--                    <a href="#"><img src="--><?php //bloginfo('template_url') ?><!--/images/photo5330308848654854604.jpg"></a>-->
+                </div>
             </div>
             <div class="advance-text advance-item">
                 <h1>Работа в Европе</h1>
