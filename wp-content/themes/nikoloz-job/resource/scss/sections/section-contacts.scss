@@ -1,22 +1,29 @@
 .section-contacts{
+  color: white;
   padding: 95px 0 75px;
   background: radial-gradient(circle,#ffc01f,#eba900);
   @media (min-width: 767px) {
     padding: 110px 0 95px;
   }
-  .contacts-item{
+  a{
     color: white;
+  }
+  .contacts-item{
     text-shadow: rgba(140,140,140,.1) 1px 1px;
     width: 100%;
     text-align: center;
+    padding-top: 70px;
     @media (min-width: 767px) {
       width: 33.33333%;
     }
-    p{
-      font-size: 16px;
-      a{
-        color: white;
-      }
-    }
+  }
+  .contacts-item.icon-map-marker-alt{
+    background: url("../images/geolocation.jpg") no-repeat 50% 0;
+  }
+  .contacts-item.icon-phone{
+    background: url("../images/phone.jpg") no-repeat 50% 0;
+  }
+  .contacts-item.icon-envelope{
+    background: url("../images/letter.jpg") no-repeat 50% 0;
   }
 }

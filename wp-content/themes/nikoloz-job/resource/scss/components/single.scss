@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .masthead{
   padding: 170px 0 100px;
   min-height: auto;
@@ -69,12 +70,24 @@
       }
     }
   }
+=======
+.site-content.row-line{
+  justify-content: space-between;
+  padding: 80px 0;
+>>>>>>> d2bf3f9d0f7be60f8b6cf8ddd01c61aed9319d8d
 }
 
 .main{
   width: 100%;
+  a{
+    color: #50CBCB;
+    &:hover{
+      color: #2f9f9f;
+    }
+  }
   @media (min-width: 767px) {
-    width: 65%;
+    padding-right: 30px;
+    width: 66.666%;
   }
   .post-item{
     margin-bottom: 60px;
@@ -118,12 +131,6 @@
 
     .post-comment{
       margin-bottom: 25px;
-      a{
-        color: #50CBCB;
-        &:hover{
-          color: #2f9f9f;
-        }
-      }
     }
   }
   .comment-warning{
@@ -136,4 +143,14 @@
 }
 
 
+<<<<<<< HEAD
 
+=======
+.sidebar-wrapper{
+  display: none;
+  @media (min-width: 767px) {
+    display: block;
+    width: 33.333%;
+  }
+}
+>>>>>>> d2bf3f9d0f7be60f8b6cf8ddd01c61aed9319d8d

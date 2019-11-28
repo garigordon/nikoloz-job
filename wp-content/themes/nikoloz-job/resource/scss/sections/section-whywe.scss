@@ -2,14 +2,16 @@
     position: relative;
     background: url(../images/nobg.png) center center fixed #ebeef6;
   .column {
-    flex: 0 0 100%;
-    max-width: 100%;
+    width: 100%;
     text-align: justify;
+<<<<<<< HEAD
     padding-right: 15px;
     padding-left: 15px;
+=======
+    padding: 15px;
+>>>>>>> d2bf3f9d0f7be60f8b6cf8ddd01c61aed9319d8d
     @media (min-width: 992px) {
-      flex: 0 0 50%;
-      max-width: 50%;
+      width: 50%;
     }
   }
   .whywe-list {
@@ -23,6 +25,7 @@
       padding: 0 0 0 65px;
       margin-bottom: 30px;
       position: relative;
+<<<<<<< HEAD
     }
 
     i {
@@ -32,8 +35,13 @@
       font-size: 25px;
       color: #50CBCB;
       @media (min-width: 768px) {
+=======
+      &:before{
+        position: absolute;
+        content: '';
+        top:0;
+>>>>>>> d2bf3f9d0f7be60f8b6cf8ddd01c61aed9319d8d
         left: 0;
-        font-size: 45px;
       }
       &.icon-thumbs-up:before {
         content: "\f164";
@@ -61,6 +69,36 @@
         content: "\f0c0";
         font-family: 'FontAwesome';
       }
+    }
+    .icon-star:before{
+      background: url("../images/icon1.jpg") no-repeat;
+      height: 47px;
+      width: 50px;
+    }
+    .icon-shield-alt:before{
+      background: url("../images/icon2.jpg") no-repeat;
+      height: 49px;
+      width: 48px;
+    }
+    .icon-users:before{
+      background: url("../images/icon3.jpg") no-repeat;
+      height: 50px;
+      width: 46px;
+    }
+    .icon-thumbs-up:before{
+      background: url("../images/icon4.jpg") no-repeat;
+      height: 49px;
+      width: 55px;
+    }
+    .icon-bullhorn:before{
+      background: url("../images/icon5.jpg") no-repeat;
+      height: 36px;
+      width: 57px;
+    }
+    .icon-flag:before{
+      background: url("../images/icon6.jpg") no-repeat;
+      height: 46px;
+      width: 47px;
     }
 
     h3 {

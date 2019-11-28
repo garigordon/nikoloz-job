@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .masthead{
     padding: 170px 0 100px;
     min-height: auto;
@@ -44,6 +45,8 @@
     }
 }
 
+=======
+>>>>>>> d2bf3f9d0f7be60f8b6cf8ddd01c61aed9319d8d
 .site-content.row-line{
     justify-content: space-between;
     padding: 80px 0;
@@ -55,7 +58,8 @@
 .main{
     width: 100%;
     @media (min-width: 767px) {
-        width: 65%;
+        padding-right: 30px;
+        width: 66.666%;
     }
     .post-item{
         margin-bottom: 60px;
@@ -144,9 +148,18 @@
     }
 }
 
+<<<<<<< HEAD
 .single .masthead,
 .category .masthead {
     padding-bottom: 80px;
     min-height: auto;
     background-size: cover;
+=======
+.sidebar-wrapper{
+    display: none;
+    @media (min-width: 767px) {
+        display: block;
+        width: 33.333%;
+    }
+>>>>>>> d2bf3f9d0f7be60f8b6cf8ddd01c61aed9319d8d
 }

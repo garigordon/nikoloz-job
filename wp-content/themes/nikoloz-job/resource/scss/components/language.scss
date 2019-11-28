@@ -1,12 +1,20 @@
 .language {
   position: absolute;
   top: -10px;
-  right: 18px;
+  right: 0;
   padding: 0;
   margin: 0;
+<<<<<<< HEAD
   list-style: none;
   @media (max-width: 1199.98px) {
     right: calc(50% - 51px);
+=======
+  left: 0;
+  text-align: center;
+  @media (min-width: 767px) {
+    text-align: right;
+    right: 18px;
+>>>>>>> d2bf3f9d0f7be60f8b6cf8ddd01c61aed9319d8d
   }
   li {
     margin-right: 5px;
