@@ -8,6 +8,7 @@
   overflow: hidden;
   @media (min-width: 767px) {
     background: url(../images/bg_header_xl.jpg) 75% -100px no-repeat fixed;
+    background-size: cover;
   }
   &:before{
     position: absolute;
@@ -70,11 +71,6 @@
   }
 }
 
-.site-content.row-line{
-  justify-content: space-between;
-  padding: 80px 0;
-}
-
 .main{
   width: 100%;
   @media (min-width: 767px) {
@@ -88,6 +84,9 @@
 
   .post-inner {
     padding: 40px 30px 60px;
+    @media (max-width: 767px) {
+      padding: 20px;
+    }
 
     .post-meta {
       list-style: none;
@@ -137,10 +136,4 @@
 }
 
 
-.sidebar-wrapper{
-  display: none;
-  @media (min-width: 767px) {
-    display: block;
-    width: 32%;
-  }
-}
+

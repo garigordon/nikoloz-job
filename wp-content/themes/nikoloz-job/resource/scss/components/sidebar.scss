@@ -120,6 +120,33 @@
           padding: 0 10px;
           &:first-child{
             padding-left: 0;
+            &:before {
+              display: none;
+            }
+          }
+          &:before{
+            position: absolute;
+            top: 5px;
+            left: -3px;
+            width: 1px;
+            height: 10px;
+            background: #e9ecef;
+            content: '';
+          }
+          .icon {
+            margin-right: 5px;
+          }
+          .icon-comment-alt:before {
+            content: "\f27a";
+          }
+
+          .icon-eye:before {
+            content: "\f06e";
+            font-family: 'FontAwesome';
+          }
+
+          .icon-clock:before {
+            content: "\f017";
           }
         }
       }
@@ -212,5 +239,12 @@
           }
         }
       }
+  }
+}
+
+.sidebar-wrapper{
+  width: 100%;
+  @media (min-width: 767px) {
+    width: 32%;
   }
 }

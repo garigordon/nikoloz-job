@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
  * @return bool
  */
 function wc_string_to_bool( $string ) {
-	return is_bool( $string ) ? $string : ( 'yes' === $string || 1 === $string || 'true' === $string || '1' === $string );
+	return is_bool( $string ) ? $string : ( 'yes' === strtolower( $string ) || 1 === $string || 'true' === strtolower( $string ) || '1' === $string );
 }
 
 /**
@@ -606,10 +606,8 @@ function wc_price( $price, $args = array() ) {
  * @return int
  */
 function wc_let_to_num( $size ) {
-	$l    = substr( $size, -1 );
-	$ret  = substr( $size, 0, -1 );
-	$byte = 1024;
-
+	$l   = substr( $size, -1 );
+	$ret = (int) substr( $size, 0, -1 );
 	switch ( strtoupper( $l ) ) {
 		case 'P':
 			$ret *= 1024;
@@ -790,9 +788,9 @@ if ( ! function_exists( 'wc_rgb_from_hex' ) ) {
 		$color = preg_replace( '~^(.)(.)(.)$~', '$1$1$2$2$3$3', $color );
 
 		$rgb      = array();
-		$rgb['R'] = hexdec( $color{0} . $color{1} );
-		$rgb['G'] = hexdec( $color{2} . $color{3} );
-		$rgb['B'] = hexdec( $color{4} . $color{5} );
+		$rgb['R'] = hexdec( $color[0] . $color[1] );
+		$rgb['G'] = hexdec( $color[2] . $color[3] );
+		$rgb['B'] = hexdec( $color[4] . $color[5] );
 
 		return $rgb;
 	}
@@ -859,7 +857,7 @@ if ( ! function_exists( 'wc_hex_lighter' ) ) {
 	}
 }
 
-if ( ! function_exists( 'wc_is_light' ) ) {
+if ( ! function_exists( 'wc_hex_is_light' ) ) {
 
 	/**
 	 * Determine whether a hex color is light.
@@ -929,10 +927,10 @@ function wc_format_postcode( $postcode, $country ) {
 	switch ( $country ) {
 		case 'CA':
 		case 'GB':
-			$postcode = trim( substr_replace( $postcode, ' ', -3, 0 ) );
+			$postcode = substr_replace( $postcode, ' ', -3, 0 );
 			break;
 		case 'IE':
-			$postcode = trim( substr_replace( $postcode, ' ', 3, 0 ) );
+			$postcode = substr_replace( $postcode, ' ', 3, 0 );
 			break;
 		case 'BR':
 		case 'PL':
@@ -952,7 +950,7 @@ function wc_format_postcode( $postcode, $country ) {
 			break;
 	}
 
-	return apply_filters( 'woocommerce_format_postcode', $postcode, $country );
+	return apply_filters( 'woocommerce_format_postcode', trim( $postcode ), $country );
 }
 
 /**
@@ -978,7 +976,7 @@ function wc_format_phone_number( $phone ) {
 	if ( ! WC_Validation::is_phone( $phone ) ) {
 		return '';
 	}
-	return preg_replace( '/[^0-9\+\-\s]/', '-', preg_replace( '/[\x00-\x1F\x7F-\xFF]/', '', $phone ) );
+	return preg_replace( '/[^0-9\+\-\(\)\s]/', '-', preg_replace( '/[\x00-\x1F\x7F-\xFF]/', '', $phone ) );
 }
 
 /**

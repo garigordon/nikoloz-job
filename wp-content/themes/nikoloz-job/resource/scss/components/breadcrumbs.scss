@@ -1,0 +1,39 @@
+.breadcrumbs{
+  padding: 13px 0;
+  margin: 0;
+
+  li{
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    &:last-child:after{
+      content:none;
+    }
+    &:after{
+      content: '/';
+      color: #45c8b3;
+      font-weight: 700;
+    }
+    a{
+      color: #fff;
+      padding-right: 5px;
+      &:hover{
+        text-decoration: none;
+        color: #50CBCB;
+      }
+    }
+    span{
+      color: rgba(255,255,255,.7);
+    }
+  }
+
+  .post-categories {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    &:after{
+      content: '/';
+      color: #45c8b3;
+      font-weight: 700;
+    }
+  }
+}

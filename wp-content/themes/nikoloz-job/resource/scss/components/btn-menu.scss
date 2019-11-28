@@ -1,0 +1,62 @@
+.btn-menu {
+  position: absolute;
+  display: none;
+  width: 50px;
+  right: 15px;
+  top: 5px;
+  height: 100%;
+  transition: .5s;
+  @media (max-width: 1199.98px) {
+    display: block;
+  }
+
+  &__parent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 4;
+  }
+
+  &__decor {
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 2px;
+    background-color: #50CBCB;
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 50%;
+    }
+    &:nth-child(3) {
+      top: 100%;
+    }
+  }
+}
+
+.open-nav {
+  .btn-menu {
+    z-index: 222;
+    &__decor {
+      &:nth-child(1) {
+        top: 50%;
+        transform: rotateZ(-140deg);
+      }
+      &:nth-child(2) {
+        top: 50%;
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        top: 50%;
+        transform: rotateZ(140deg);
+      }
+    }
+    @media (max-width: 1199.98px) {
+      transform: translate3d(0,0,0);
+    }
+  }
+}

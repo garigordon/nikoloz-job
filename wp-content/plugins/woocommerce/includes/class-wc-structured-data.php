@@ -178,7 +178,6 @@ class WC_Structured_Data {
 	 * Generates Product structured data.
 	 *
 	 * Hooked into `woocommerce_single_product_summary` action hook.
-	 * Hooked into `woocommerce_shop_loop` action hook.
 	 *
 	 * @param WC_Product $product Product data (default: null).
 	 */
@@ -195,15 +194,19 @@ class WC_Structured_Data {
 		$shop_url  = home_url();
 		$currency  = get_woocommerce_currency();
 		$permalink = get_permalink( $product->get_id() );
+		$image     = wp_get_attachment_url( $product->get_image_id() );
 
 		$markup = array(
 			'@type'       => 'Product',
 			'@id'         => $permalink . '#product', // Append '#product' to differentiate between this @id and the @id generated for the Breadcrumblist.
 			'name'        => $product->get_name(),
 			'url'         => $permalink,
-			'image'       => wp_get_attachment_url( $product->get_image_id() ),
 			'description' => wp_strip_all_tags( do_shortcode( $product->get_short_description() ? $product->get_short_description() : $product->get_description() ) ),
 		);
+
+		if ( $image ) {
+			$markup['image'] = $image;
+		}
 
 		// Declare SKU or fallback to ID.
 		if ( $product->get_sku() ) {
@@ -233,9 +236,10 @@ class WC_Structured_Data {
 					);
 				} else {
 					$markup_offer = array(
-						'@type'     => 'AggregateOffer',
-						'lowPrice'  => wc_format_decimal( $lowest, wc_get_price_decimals() ),
-						'highPrice' => wc_format_decimal( $highest, wc_get_price_decimals() ),
+						'@type'      => 'AggregateOffer',
+						'lowPrice'   => wc_format_decimal( $lowest, wc_get_price_decimals() ),
+						'highPrice'  => wc_format_decimal( $highest, wc_get_price_decimals() ),
+						'offerCount' => count( $product->get_children() ),
 					);
 				}
 			} else {
@@ -256,7 +260,7 @@ class WC_Structured_Data {
 
 			$markup_offer += array(
 				'priceCurrency' => $currency,
-				'availability'  => 'https://schema.org/' . ( $product->is_in_stock() ? 'InStock' : 'OutOfStock' ),
+				'availability'  => 'http://schema.org/' . ( $product->is_in_stock() ? 'InStock' : 'OutOfStock' ),
 				'url'           => $permalink,
 				'seller'        => array(
 					'@type' => 'Organization',
@@ -268,7 +272,7 @@ class WC_Structured_Data {
 			$markup['offers'] = array( apply_filters( 'woocommerce_structured_data_product_offer', $markup_offer, $product ) );
 		}
 
-		if ( $product->get_review_count() && wc_review_ratings_enabled() ) {
+		if ( $product->get_rating_count() && wc_review_ratings_enabled() ) {
 			$markup['aggregateRating'] = array(
 				'@type'       => 'AggregateRating',
 				'ratingValue' => $product->get_average_rating(),

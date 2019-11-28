@@ -12,9 +12,9 @@
     <link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/images/favicon/favicon.ico">
     <link rel="image_src" href="<?php bloginfo('template_url') ?>/images/site-image.png"/>
     <link rel="alternate" hreflang="ru" href="https://nikoloz-job.ua/"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <meta name="msapplication-TileColor" content="#08031e">
     <meta name="theme-color" content="#ffffff">
-    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class() ?>>
@@ -44,7 +44,14 @@
                     <div class="column-logo">
                         <a href="<?php bloginfo('home') ?>"><img src="<?php bloginfo('template_url') ?>/images/logo.png" alt="NIKOLOZ-JOB" title="NIKOLOZ-JOB" /></a>
                     </div>
-                    <div class="column-menu">
+                    <span class="btn-menu">
+                        <div class="btn-menu__parent">
+                            <span class="btn-menu__decor"></span>
+                            <span class="btn-menu__decor"></span>
+                            <span class="btn-menu__decor"></span>
+                        </div>
+                    </span>
+                    <div class="column-menu header__holder-nav">
                         <?php
                         wp_nav_menu([
                             'theme_location' => 'header-menu',
@@ -52,7 +59,7 @@
                             'container' => 'ul',
                             'container_class' => '',
                             'container_id' => '',
-                            'menu_class' => 'navbar-nav js-nav-menu-animations nav-menu-with-sub-menu',
+                            'menu_class' => 'navbar-nav menu js-nav-menu-animations nav-menu-with-sub-menu',
                             'menu_id' => '',
                             'echo' => true,
                             'fallback_cb' => 'wp_page_menu',

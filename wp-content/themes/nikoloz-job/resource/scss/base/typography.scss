@@ -11,7 +11,7 @@ h6, .h6,
 .h {
   font-family: map-deep-get($headings, 'fonts', 'headings-font-family');
   font-weight: bold;
-  margin: 0 0 0.5em;
+  margin: 0 0 10px;
   color: #000;
 }
 
@@ -92,7 +92,7 @@ h4, h5, h6 {
   }
 
   h2 {
-    font-size: 50px;
+    font-size: 49px;
   }
 }
 

@@ -22,19 +22,19 @@ $headings: (
 
 // Global vars for body typography
 $base: (
-  'base-font-sans-serif': unquote("BlinkMacSystemFont, Segoe UI, Roboto, Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  'base-font-sans-serif': unquote("SegoeUIRegular, Segoe UI, Roboto, Arial, 'Helvetica Neue', Helvetica, sans-serif"),
   'base-text-color': #212529,
   'base-background-color':  #f7f8fa,
   'base-link-color':#39f,
   'base-font-size': 1rem,
-  'base-line-height': 1.5,
-  'base-font-family': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  'base-line-height': 1.33,
+  'base-font-family': unquote("SegoeUIRegular, Arial, 'Helvetica Neue', Helvetica, sans-serif"),
   'base-min-width': 320px,
 );
 
 // Vars for forms
 $forms: (
-  'form-font-family': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  'form-font-family': unquote("SegoeUIRegular, Arial, 'Helvetica Neue', Helvetica, sans-serif"),
   'form-element-padding': unquote("0.4em 0.7em"),
   'form-element-border-color': #999,
   'form-element-focus-border-color': #000,
@@ -59,3 +59,7 @@ $media-expressions: (
   'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
   'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
 );
+
+$carousel-height: 800px !default;
+$carousel-item-height: $carousel-height / 2 !default;
+$carousel-item-width: $carousel-item-height !default;

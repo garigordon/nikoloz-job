@@ -5,6 +5,8 @@
     flex: 0 0 100%;
     max-width: 100%;
     text-align: justify;
+    padding-right: 15px;
+    padding-left: 15px;
     @media (min-width: 992px) {
       flex: 0 0 50%;
       max-width: 50%;
@@ -20,6 +22,7 @@
     li {
       padding: 0 0 0 65px;
       margin-bottom: 30px;
+      position: relative;
     }
 
     i {
@@ -27,9 +30,36 @@
       left: 25px;
       position: absolute;
       font-size: 25px;
+      color: #50CBCB;
       @media (min-width: 768px) {
         left: 0;
         font-size: 45px;
+      }
+      &.icon-thumbs-up:before {
+        content: "\f164";
+      }
+
+      &.icon-bullhorn:before {
+        content: "\f0a1";
+        font-family: 'FontAwesome';
+      }
+
+      &.icon-flag:before {
+        content: "\f024";
+      }
+
+      &.icon-star:before {
+        content: "\f005";
+      }
+
+      &.icon-shield-alt:before {
+        content: "\f3ed";
+        font-family: 'FontAwesome';
+      }
+
+      &.icon-users:before {
+        content: "\f0c0";
+        font-family: 'FontAwesome';
       }
     }
 

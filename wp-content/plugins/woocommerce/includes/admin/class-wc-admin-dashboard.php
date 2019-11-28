@@ -36,6 +36,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 		 * Init dashboard widgets.
 		 */
 		public function init() {
+			// Reviews Widget.
 			if ( current_user_can( 'publish_shop_orders' ) && post_type_supports( 'product', 'comments' ) ) {
 				wp_add_dashboard_widget( 'woocommerce_dashboard_recent_reviews', __( 'WooCommerce Recent Reviews', 'woocommerce' ), array( $this, 'recent_reviews' ) );
 			}
@@ -215,7 +216,12 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 			if ( false === $lowinstock_count ) {
 				$lowinstock_count = (int) $wpdb->get_var(
 					$wpdb->prepare(
-						"SELECT COUNT( product_id ) FROM {$wpdb->wc_product_meta_lookup} WHERE stock_quantity <= %d AND stock_quantity > %d",
+						"SELECT COUNT( product_id )
+						FROM {$wpdb->wc_product_meta_lookup} AS lookup
+						INNER JOIN {$wpdb->posts} as posts ON lookup.product_id = posts.ID
+						WHERE stock_quantity <= %d
+						AND stock_quantity > %d
+						AND posts.post_status = 'publish'",
 						$stock,
 						$nostock
 					)
@@ -229,7 +235,11 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 			if ( false === $outofstock_count ) {
 				$outofstock_count = (int) $wpdb->get_var(
 					$wpdb->prepare(
-						"SELECT COUNT( product_id ) FROM {$wpdb->wc_product_meta_lookup} WHERE stock_quantity <= %d",
+						"SELECT COUNT( product_id )
+						FROM {$wpdb->wc_product_meta_lookup} AS lookup
+						INNER JOIN {$wpdb->posts} as posts ON lookup.product_id = posts.ID
+						WHERE stock_quantity <= %d
+						AND posts.post_status = 'publish'",
 						$nostock
 					)
 				);
@@ -295,10 +305,10 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 					$rating = intval( get_comment_meta( $comment->comment_ID, 'rating', true ) );
 
 					/* translators: %s: rating */
-					echo '<div class="star-rating"><span style="width:' . esc_html( $rating * 20 ) . '%">' . sprintf( esc_html__( '%s out of 5', 'woocommerce' ), esc_html( $rating ) ) . '</span></div>';
+					echo '<div class="star-rating"><span style="width:' . esc_attr( $rating * 20 ) . '%">' . sprintf( esc_html__( '%s out of 5', 'woocommerce' ), esc_html( $rating ) ) . '</span></div>';
 
 					/* translators: %s: review author */
-					echo '<h4 class="meta"><a href="' . esc_url( get_permalink( $comment->ID ) ) . '#comment-' . esc_html( absint( $comment->comment_ID ) ) . '">' . esc_html( apply_filters( 'woocommerce_admin_dashboard_recent_reviews', $comment->post_title, $comment ) ) . '</a> ' . sprintf( esc_html__( 'reviewed by %s', 'woocommerce' ), esc_html( $comment->comment_author ) ) . '</h4>';
+					echo '<h4 class="meta"><a href="' . esc_url( get_permalink( $comment->ID ) ) . '#comment-' . esc_attr( absint( $comment->comment_ID ) ) . '">' . esc_html( apply_filters( 'woocommerce_admin_dashboard_recent_reviews', $comment->post_title, $comment ) ) . '</a> ' . sprintf( esc_html__( 'reviewed by %s', 'woocommerce' ), esc_html( $comment->comment_author ) ) . '</h4>';
 					echo '<blockquote>' . wp_kses_data( $comment->comment_content ) . '</blockquote></li>';
 
 				}
@@ -378,7 +388,6 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 		</div>
 			<?php
 		}
-
 	}
 
 endif;

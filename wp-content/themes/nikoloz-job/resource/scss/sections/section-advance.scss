@@ -2,25 +2,38 @@
    background: radial-gradient(circle,#64d1d1,#3cc5c5);
    h1, h2{
     color: white;
+     @media (max-width: 767px) {
+       text-align: center;
+       font-size: 28px;
+     }
    }
    .advance-item{
         width: 100%;
+       @media (max-width: 767px) {
+         text-align: center;
+         &:first-child {
+           margin-bottom: 20px;
+         }
+       }
         @media (min-width: 767px) {
            width: 50%;
         }
    }
-   .advance-photo-gallery-wrap{
-       height: 300px;
-   }
+
    .advance-gallery{
         width: 290px;
         height: 210px;
-        margin-top: 75px;
+        margin-top: 42px;
         display: inline-block;
         position: relative;
         @media (min-width: 767px) {
            width: 460px;
             height: 338px;
+        }
+        &:hover {
+          .fg-arrow {
+            opacity: 1;
+          }
         }
    }
 
@@ -32,4 +45,23 @@
        background: #35b3b3;
        text-align: justify;
    }
+
+  .row-line {
+    align-items: flex-start;
+  }
+
+  h2,
+  h1 {
+    font-family: "SegoeUILight",  Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  ul {
+    list-style: disc;
+    padding: 0 0 15px 30px;
+  }
+
 }

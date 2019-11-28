@@ -1,41 +1,29 @@
-<section class="section section-testimonials">
-    <div class="container">
-        <div class="section-heading">
-            <h2 class="heading-text">Отзывы</h2>
-            <hr class="lines">
-        </div>
-        <div class="row-line">
-            <div class="testimonials-video-wrap">
-                <div class="testimonials-video testimonials-video--l slideInLeft">
-                    <div class="unslider">
-                        <div class="testimonials-video-slider">
-                            <ul class="unslider-wrap">
-                                <li class="unslider-clone">
-                                    <div class="video-slider-item">
-                                        <img src="<?php bloginfo('template_url') ?>/images/51c553c466749eb5868a9b61077266b6_447x338_74a.jpg" alt="Легальная работа в Чехии. Отзыв о работе в Праге.">
-                                        <a href="#"></a>
-                                    </div>
-                                </li>
-                            </ul>
-                            <nav class="unslider-nav">
-                                <ol>
-                                    <li>1</li>
-                                    <li>2</li>
-                                    <li>3</li>
-                                    <li>4</li>
-                                    <li>5</li>
-                                    <li>6</li>
-                                    <li>7</li>
-                                    <li>8</li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
+<?php if( have_rows('comment-frontpage') ): ?>
+    <section class="section section-testimonials">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="heading-text">Отзывы</h2>
+                <hr class="lines">
+            </div>
+            <div class="row-line">                
+                <div class="testimonials-messages slideInRight">
+                    <a href="#" class="testimonials-btn">Еще отзывы</a>
                 </div>
             </div>
-            <div class="testimonials-messages slideInRight">
-                <a href="#" class="testimonials-btn">Еще отзывы</a>
+            <div class="carousel">
+            <?php
+                $count = 0;
+                while( have_rows('comment-frontpage') ): the_row();
+                    $commentImage = get_sub_field('comment-frontpage-image');
+                    $commentVideo = get_sub_field('comment-frontpage-video');
+                    $count++;
+                ?>
+                <div class="carousel-item">                    
+                    <a data-fancybox href="<?= $commentVideo ?>&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" class="video-slider-btn-play"></a>
+                    <img  src="<?php echo $commentImage['url']; ?>" alt="<?php echo $commentImage['alt'] ?>">
+                </div>                
+            <?php endwhile; ?>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
