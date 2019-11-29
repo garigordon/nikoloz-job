@@ -1,0 +1,19 @@
+.tab-testimonials-video{
+  margin-bottom: 25px;
+
+  .video-gallery-more{
+    margin-top: 25px;
+    color: #50CBCB;
+    border: 1px solid #50CBCB;
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+
+    &:hover{
+      color: #fff;
+      background-color: #50CBCB;
+      border-color: #50CBCB;
+      text-decoration: none;
+    }
+  }
+}
