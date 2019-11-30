@@ -6,7 +6,7 @@ html {
 	box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: border-box;
+	box-sizing: inherit;
 }
 
 body {
@@ -21,7 +21,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  vertical-align: middle;
 }
 
 // google map fix
@@ -33,24 +32,4 @@ img {
     cursor: default;
     pointer-events: none;
   }
-}
-
-a {
-  transition: all .2s ease-in-out;
-  text-decoration: none;
-  color: #50CBCB;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-h1, h2 {
-  font-weight: 300;
-}
-
-ul, ol{
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }

@@ -23,8 +23,6 @@
         <div class="navbar">
             <div class="container">
                 <ul class="language">
-                    <li><span>Мова:</span></li>
-                    <li><a>Українська</a></li>
                     <?php
                     if ( qtrans_getLanguage() == 'ua' ) { ?>
                         <li>
@@ -74,90 +72,6 @@
                             'walker' => '',
                         ]);
                         ?>
-                        <ul class="navbar-nav">
-                            <li><a href="#" title="Главная">Главная</a></li>
-                            <li><a href="#" title="О нас">О нас</a></li>
-                            <li><a href="#" title="Актуальные вакансии">Актуальные вакансии</a></li>
-                            <li>
-                                <a href="#" title="Работа">Работа</a>
-                                <span class="icon-angle-down"></span>
-                                <div class="navbar-subnav">
-                                    <ul>
-                                        <li><a href="#" title="Работа в Финляндии">Работа в Финляндии</a></li>
-                                        <li><a href="#" title="Работа в Чехии">Работа в Чехии</a></li>
-                                        <li><a href="#" title="Работа в Ирландии">Работа в Ирландии</a></li>
-                                        <li><a href="#" title="Работа в Германии">Работа в Германии</a></li>
-                                        <li><a href="#" title="Работа в Норвегии">Работа в Норвегии</a></li>
-                                        <li><a href="#" title="Работа за границей для женщин">Работа за границей для женщин</a></li>
-                                        <li><a href="#" title="Работа за границей для мужчин">Работа за границей для мужчин</a></li>
-                                        <li><a href="#" title="Работа за границей для семейных пар">Работа за границей для семейных пар</a></li>
-                                        <li><a href="#" title="Работа за границей для девушек">Работа за границей для девушек</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#" title="Отзывы">Отзывы</a></li>
-                            <li>
-                                <a href="#" title="Информация">Информация</a>
-                                <span class="icon-angle-down"></span>
-                                <div class="navbar-subnav">
-                                    <ul>
-                                        <li><a href="#" title="Сертификат для сезонных работ в Финляндии">Сертификат для сезонных работ в Финляндии</a></li>
-                                        <li><a href="#" title="Новости">Новости</a></li>
-                                        <li><a href="#" title="Статьи">Статьи</a></li>
-                                        <li><a href="#" title="Фотогалерея">Фотогалерея</a></li>
-                                        <li><a href="#" title="Видео галерея">Видео галерея</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#" title="Partnership">Partnership</a></li>
-                            <li><a href="#" title="Контакты">Контакты</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-mobile-toggle" id="nav-mobile-toggle">
-                        <div class="nav-mobile-toggle-trigger" id="nav-mobile-toggle-trigger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="nav-mobile">
-                        <ul>
-                            <li><a href="#" title="Главная">Главная</a></li>
-                            <li><a href="#" title="О нас">О нас</a></li>
-                            <li><a href="#" title="Актуальные вакансии">Актуальные вакансии</a></li>
-                            <li>
-                                <a href="#" title="Работа">Работа</a>
-                                <div class="navbar-subnav">
-                                    <ul>
-                                        <li><a href="#" title="Работа в Финляндии">Работа в Финляндии</a></li>
-                                        <li><a href="#" title="Работа в Чехии">Работа в Чехии</a></li>
-                                        <li><a href="#" title="Работа в Ирландии">Работа в Ирландии</a></li>
-                                        <li><a href="#" title="Работа в Германии">Работа в Германии</a></li>
-                                        <li><a href="#" title="Работа в Норвегии">Работа в Норвегии</a></li>
-                                        <li><a href="#" title="Работа за границей для женщин">Работа за границей для женщин</a></li>
-                                        <li><a href="#" title="Работа за границей для мужчин">Работа за границей для мужчин</a></li>
-                                        <li><a href="#" title="Работа за границей для семейных пар">Работа за границей для семейных пар</a></li>
-                                        <li><a href="#" title="Работа за границей для девушек">Работа за границей для девушек</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#" title="Отзывы">Отзывы</a></li>
-                            <li><a href="#" title="Информация">Информация</a>
-                            </li>
-                            <li>
-                                <a href="#" title="Partnership">Partnership</a>
-                                <div class="navbar-subnav">
-                                    <ul>
-                                        <li><a href="#" title="Сертификат для сезонных работ в Финляндии">Сертификат для сезонных работ в Финляндии</a></li>
-                                        <li><a href="#" title="Новости">Новости</a></li>
-                                        <li><a href="#" title="Статьи">Статьи</a></li>
-                                        <li><a href="#" title="Фотогалерея">Фотогалерея</a></li>
-                                        <li><a href="#" title="Видео галерея">Видео галерея</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#" title="Контакты">Контакты</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>

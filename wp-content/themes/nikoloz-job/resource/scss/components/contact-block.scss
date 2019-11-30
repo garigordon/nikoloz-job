@@ -1,5 +1,12 @@
 .contact-block{
-  width: 50%;
+  width: 49%;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+
+  img{
+    width: 100%;
+  }
 
   h4{
     text-transform: uppercase;
@@ -13,7 +20,6 @@
 
     li{
       margin-bottom: 10px;
-      padding-left: 20px;
 
       &:last-child{
         margin-bottom: 0;

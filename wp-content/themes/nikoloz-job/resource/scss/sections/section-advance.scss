@@ -7,30 +7,14 @@
        font-size: 28px;
      }
    }
-
-  ul{
-    list-style: disc;
-    margin-bottom: 1rem;
-    padding-left: 40px;
-  }
-  .advance{
-    margin-bottom: 0;
-    @media (min-width: 767px) {
-      margin-bottom: 10px;
-    }
-  }
    .advance-item{
         width: 100%;
-<<<<<<< HEAD
        @media (max-width: 767px) {
          text-align: center;
          &:first-child {
            margin-bottom: 20px;
          }
        }
-=======
-        text-align: center;
->>>>>>> d2bf3f9d0f7be60f8b6cf8ddd01c61aed9319d8d
         @media (min-width: 767px) {
            width: 50%;
         }
@@ -39,29 +23,18 @@
    .advance-gallery{
         width: 290px;
         height: 210px;
-<<<<<<< HEAD
         margin-top: 42px;
-=======
->>>>>>> d2bf3f9d0f7be60f8b6cf8ddd01c61aed9319d8d
         display: inline-block;
         position: relative;
         @media (min-width: 767px) {
-          width: 460px;
-          height: 338px;
+           width: 460px;
+            height: 338px;
         }
-<<<<<<< HEAD
         &:hover {
           .fg-arrow {
             opacity: 1;
           }
         }
-=======
-     .advancy-gallery-item{
-       border: 6px solid #fff;
-       display: inline-block;
-       box-shadow: 0 0 5px rgba(0,0,0,.2);
-     }
->>>>>>> d2bf3f9d0f7be60f8b6cf8ddd01c61aed9319d8d
    }
 
    .advance-text{

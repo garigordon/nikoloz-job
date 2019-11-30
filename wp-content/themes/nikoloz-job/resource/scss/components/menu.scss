@@ -1,11 +1,7 @@
 .navbar-nav {
   padding: 0;
-  margin: 16px 0;
-  display: none;
-  @media (min-width: 767px) {
-    display: block;
-  }
-   >li {
+  list-style: none;
+   li {
       display: inline-block;
       position: relative;
       font-size: 12px;
@@ -18,11 +14,6 @@
       &:hover {
         > a {
           color: #50CBCB;
-        }
-        .navbar-subnav {
-          top: 100%;
-          opacity: 1;
-          visibility: visible;
         }
       }
       &.current_page_parent,
@@ -67,7 +58,6 @@
           color: #fff;
         }
       }
-<<<<<<< HEAD
 
      .sub-menu {
        position: absolute;
@@ -172,189 +162,11 @@
   .header__holder-nav {
     @media (max-width: 1199.98px) {
       transform: translate3d(0,0,0);
-=======
-     .icon-angle-down{
-       padding-right: 9px;
-       display: inline-block;
-       position: relative;
-       &:after{
-         content: '';
-         position: absolute;
-         background: url("../images/array-bottom.jpg") no-repeat;
-         width: 9px;
-         height: 5px;
-         top: -7px;
-       }
-     }
-    }
-  .navbar-subnav{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 2;
-    ul{
-      position: relative;
-      background-color: #fff;
-      padding: 8px 0;
-      border-radius: 2px;
-      box-shadow: 0 1px 2px 0 rgba(50,50,50,.2);
-      transition: opacity .4s ease-in-out,top .2s ease-in-out;
-      &:before{
-        content: '';
-        position: absolute;
-        top: -4px;
-        left: 30px;
-        width: 0;
-        height: 0;
-        border-left: 4px solid transparent;
-        border-right: 4px solid transparent;
-        border-bottom: 4px solid #fff;
-      }
-      li{
-        padding: 5px 0;
-        border-bottom: 1px solid #ebeef8;
-        &:last-child{
-          border: none;
-        }
-        a{
-          display: block;
-          text-transform: none;
-          text-decoration: none;
-          padding: 0 15px;
-          white-space: nowrap;
-          min-width: 150px;
-          font-size: 12px;
-          color: #333;
-          transition: opacity .3s ease-in-out;
-          &:hover{
-            color: #50CBCB;
-          }
-        }
-      }
     }
   }
 }
 
-.nav-mobile-toggle{
-  position: absolute;
-  display: block;
-  width: 50px;
-  right: 15px;
-  top: 5px;
-  height: 100%;
-  transition: .5s;
-  @media (min-width: 767px) {
-    display: none;
-  }
-  .nav-mobile-toggle-trigger{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 35px;
-    height: 21px;
-    cursor: pointer;
-    z-index: 4;
-    span{
-      position: absolute;
-      left: 0;
-      width: 35px;
-      height: 2px;
-      background-color: #50CBCB;
-      font-weight: bolder;
-      &:nth-child(1){
-        top: 0;
-      }
-      &:nth-child(2){
-        top: 50%;
-      }
-      &:nth-child(3){
-        top: 100%;
-      }
-    }
-  }
-  .nav-mobile-toggle-trigger.active{ //навешивается при нажатии на id="nav-mobile-toggle"
-    transform: rotateZ(135deg);
-    span{
-      &:nth-child(1){
-        top: 50%;
-      }
-      &:nth-child(2){
-        top: 50%;
-      }
-      &:nth-child(3){
-        top: 50%;
-        transform: rotateZ(90deg);
-      }
->>>>>>> d2bf3f9d0f7be60f8b6cf8ddd01c61aed9319d8d
-    }
-  }
-}
-
-<<<<<<< HEAD
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
-=======
-.nav-mobile{
-  width: 370px;
-  overflow: inherit;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  padding: 80px 0 45px 45px;
-  z-index: 3;
-  transform: translate3d(100%, 0, 0);
-  transition: transform .4s ease-in-out,-webkit-transform .4s ease-in-out;
-  background: rgba(0,0,0,.9);
-  &:before{
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 100%;
-    width: 10000%;
-    height: 100%;
-    background: rgba(24,24,24,.6);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .4s ease,visibility .4s ease;
-  }
-  ul{
-    display: block;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    li a{
-      display: inline-block;
-      color: #fff;
-      text-decoration: none;
-      text-transform: uppercase;
-      padding: 10px 0;
-      font-size: 14px;
-    }
-    li a:hover{
-        color: #50CBCB;
-    }
-    ul{
-      padding-left: 25px;
-      li a{
-        text-transform: none;
-      }
-    }
-  }
-}
-
-.nav-mobile-show{ //навешивается на body
-  overflow: hidden;
-  .nav-mobile{
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    &:before{
-      opacity: 1;
-      visibility: visible;
-    }
-  }
->>>>>>> d2bf3f9d0f7be60f8b6cf8ddd01c61aed9319d8d
 }

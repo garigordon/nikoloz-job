@@ -1,16 +1,29 @@
-.card-block{
-  padding: 1.25rem;
+.page-block{
   text-align: justify;
+  line-height: 1.5;
+
   .leftimg{
     float: left;
     margin: 7px 20px 7px 0;
+    width: 248px;
+    height: 350px;
   }
 
   p{
     margin-bottom: 1rem;
   }
 
-  .emblem{
-    text-align: center;
+  .emblems{
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 300px;
+    }
+    .emblem{
+      height: 300px;
+    }
+    .emblem-partner{
+      height: 126px;
+    }
   }
 }

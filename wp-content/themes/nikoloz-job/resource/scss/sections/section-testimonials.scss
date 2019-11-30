@@ -2,14 +2,6 @@
     position: relative;
     background: url(../images/bg_testimonials_sm.jpg) center center fixed #001828;
     z-index: 1;
-    padding: 110px 0 95px;
-    @media (min-width: 576px) {
-        background: url(../images/bg_testimonials_md.jpg) center center fixed #001828;
-    }
-    @media (min-width: 767px) {
-        background: url(../images/bg_testimonials_xl.jpg) center center fixed #001828;
-        padding-bottom: 0;
-    }
     .heading-text{
         color: #fff;
     }
@@ -21,21 +13,11 @@
     }
 
     .testimonials-video-wrap{
-        width: 100%;
-        @media (min-width: 767px) {
-            width: 58.333%;
-        }
+        width: 58%;
 
         .testimonials-video--l{
-            background: none;
-            padding: 40px 158px 0 45px;
-            width: 651px;
-            height: 469px;
-            margin-bottom: 0;
-            @media (min-width: 767px) {
-                background: url(../images/ipad.png) no-repeat;
-                padding: 40px 45px 0 159px;
-            }
+            background: url(../images/ipad.png) no-repeat;
+            padding: 40px 45px 0 159px;
 
             .video-slider-item{
                 height: 338px;
@@ -61,19 +43,14 @@
     }
 
     .testimonials-messages{
-        width: 100%;
+        width: 42%;
         visibility: visible;
         animation-name: slideInRight;
         padding-left: 5px;
         padding-right: 15px;
         text-align: center;
-<<<<<<< HEAD
         @media (max-width: 767px) {
             width: 100%;
-=======
-        @media (min-width: 767px) {
-            width: 41.666%;
->>>>>>> d2bf3f9d0f7be60f8b6cf8ddd01c61aed9319d8d
         }
 
         .testimonials-btn{
@@ -81,6 +58,7 @@
             border: 1px solid #50CBCB;
             display: inline-block;
             padding: 5px 10px;
+            display: inline-block;
 
             &:hover{
               color: white;

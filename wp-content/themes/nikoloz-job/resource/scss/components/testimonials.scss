@@ -1,19 +1,39 @@
-.tab-testimonials-video{
-  margin-bottom: 25px;
+.testimonials{
+  line-height: 1.5;
 
-  .video-gallery-more{
-    margin-top: 25px;
-    color: #50CBCB;
-    border: 1px solid #50CBCB;
-    display: inline-block;
-    padding: 5px 10px;
-    text-align: center;
+  .tab-testimonials-video{
+    margin-bottom: 25px;
 
-    &:hover{
-      color: #fff;
-      background-color: #50CBCB;
-      border-color: #50CBCB;
-      text-decoration: none;
+    .video-gallery{
+      justify-content: space-between;
     }
+
+    .video-gallery-btn{
+      text-align: center;
+      .video-gallery-more{
+        margin-top: 25px;
+        color: #50CBCB;
+        border: 1px solid #50CBCB;
+        display: inline-block;
+        padding: 5px 10px;
+
+        &:hover{
+          color: #fff;
+          background-color: #50CBCB;
+          border-color: #50CBCB;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .heading-center{
+    text-align: center;
+  }
+
+  .tips-list{
+    list-style: disc;
+    margin-bottom: 1rem;
+    padding-left: 40px;
   }
 }
